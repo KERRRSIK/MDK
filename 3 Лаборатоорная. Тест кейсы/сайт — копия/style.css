@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+h1{
+    font-family: 'Nunito';
+    font-size: 35px;
+    color:blueviolet;
+    text-align: center;
+}
+h2{
+    font-family: nunito;
+    text-align: left;
+}
+h3{
+    font-family: 'Nunito';
+    color:blueviolet;
+    text-align: left;
+    font-size: 30px;
+}
+hr{
+    border: 1px solid black ;
+
+}
+table{
+    width: 100%;
+    text-align: left;
+}
+label{
+    font-size: 30px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Страница заказа</h1>
+    <table border="0">
+        <tr>
+            <td><h3>Введите ваши данные</h3></td>
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <select>
+                        <option>Быстро</option>
+                        <option>Очень быстро</option>
+                        <option>Нереально быстро</option>
+                    </select>
+                    <h2>
+                        <label for="name">ФИО: </label>
+                        <input type="text" id="name">
+                    </h2>
+                    <h2>
+                        <label for="phone">Номер телефона:</label>
+                        <input type="text" id="phone">
+                    </h2>
+                    <h2>
+                        <label for="email">Электронная почта: </label>
+                        <input type="text" id="email">
+                    </h2>
+                    <h5>
+                        <input type="checkbox" id="privacy-consent">
+                        <label for="privacy-consent">я согласен на обработку данных</label>
+                    </h5>
+                    <h5>
+                        <input type="checkbox" id="add_mail" checked>
+                        <label for="add_mail">я согласен на получение персональных акций</label>
+                    </h5>
+                    <form id="order-form">
+                        <input type="submit" value="Оформить заказ">
+                    </form>
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <form>
+        <!--Выбор оценки-->
+        <label for="rating">Оцените удобство оформления заказа:</label><br>
+        <input type="radio" id="rating-1" name="rating" value="1">
+        <label for="rating-1">1</label><br>
+        <input type="radio" id="rating-2" name="rating" value="2">
+        <label for="rating-2">2</label><br>
+        <input type="radio" id="rating-3" name="rating" value="3">
+        <label for="rating-3">3</label><br>
+        <input type="radio" id="rating-4" name="rating" value="4">
+        <label for="rating-4">4</label><br>
+        <input type="radio" id="rating-5" name="rating" value="5">
+        <label for="rating-5">5</label><br>
+        <!--Отправка фотографии-->
+    </form>
+
+    <script>
+        document.getElementById('order-form').addEventListener('submit', function(event) {
+            var privacyConsent = document.getElementById('privacy-consent');
+            if (!privacyConsent.checked) {
+                alert('Пожалуйста, согласитесь на обработку данных.');
+                event.preventDefault();  // предотвращаем отправку формы
+            }
+        });
+    </script>
+</body>
+</html>
